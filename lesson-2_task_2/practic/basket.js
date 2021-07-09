@@ -13,7 +13,6 @@ export class Basket {
 
     addBasket(good){
         this._list.push(good);
-        console.log(this._list);
         this.countQuantity(this._list);
         this.setQuantity();
     }
@@ -40,7 +39,6 @@ export class Basket {
 
     render() {
         let elGood = document.querySelectorAll('.goods-item');
-        console.log(this._list);
         for(let i = 0; elGood.length > i; i++){
             elGood[i].remove();
         }
@@ -51,6 +49,7 @@ export class Basket {
             let good =  `<div class="goods-item" data-id="${list._basket._list[i]._id}">
                             <h3>${list._basket._list[i]._title}</h3>
                             <p>${list._basket._list[i]._price}</p>
+                            <p>Quantity</p>
                             <button class = 'add-btn'>Delete</button>
                         </div>`;
             elList.insertAdjacentHTML('beforeend', good);

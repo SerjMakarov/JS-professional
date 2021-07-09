@@ -17,6 +17,8 @@ class Good {
 class GoodList {
     _goods;
     _basket;
+    _total = 0;
+
 
     constructor (goods) {
         this._goods = goods;
@@ -48,10 +50,24 @@ class GoodList {
         for(let b = 0; list._goods.length > b; b++){
             if(i.target.parentNode.getAttribute('data-id') == list._goods[b]._id){
                 list._basket.addBasket(list._goods[b]);
-                console.log(list._goods[b]);
+                list.getTotalSum(list._goods[b]._price);
             }
         }
+        list.setTotalSum();
+
+        console.log(list._basket);
     }
+
+    getTotalSum(price){
+        this._total += price;
+    }
+
+    setTotalSum(){
+        let elQuantity = document.querySelector('.total-basket');
+        elQuantity.innerHTML = this._total;
+    }
+
+
 }
 
 import {Basket} from './basket.js';
