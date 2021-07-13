@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>eShop</title>
+  <style>
+    .basket {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 250px;
+    }
+  </style>
+</head>
+<body>
+  <header class="basket">
+    <button class="cart-button" type="button">Basket</button>
+    <p>Quantity:</p>
+    <div class="quantity-basket">0</div>
+    <p>Total:</p>
+    <div class="total-basket">0</div>
+  </header>
+  <main>
+    <div class="goods-list"></div>
+  </main>
+  
+  <script type = 'module' src="script.js"></script>
+  <script type = 'module' src="basket.js"></script>
+  <script type = 'module' src="api.js"></script> 
+</body>
+</html>
