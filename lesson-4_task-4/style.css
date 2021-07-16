@@ -1,0 +1,23 @@
+.block {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.block__item {
+    margin-top: 5px;
+    width: 400px;
+    height: 20px;
+    border: 2px solid rgb(80, 130, 145);
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.block__text {
+    margin-top: 10px;
+    width: 400px;
+}
